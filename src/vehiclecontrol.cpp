@@ -469,7 +469,7 @@ float VehicleControl::ProcessUdc()
    //Calculate "12V" supply voltage from voltage divider on mprot pin
    //1.2/(4.7+1.2)/3.33*4095 = 250 -> make it a bit less for pin losses etc
    //HW_REV1 had 3.9k resistors
-   int uauxGain = hwRev == HW_REV1 ? 289 : 249;
+   int uauxGain = hwRev == HW_REV1 ? 289 : 326;
    Param::SetFloat(Param::uaux, (float)AnaIn::uaux.Get() / uauxGain);
 
    //Yes heatsink temperature also selects external ADC as udc source

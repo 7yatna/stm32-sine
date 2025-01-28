@@ -302,7 +302,7 @@
 #define PARAM_ID_SUM_START_OFFSET GITHUB_RUN_NUMBER
 
 #if GITHUB_RUN_NUMBER == 0 //local build
-#define VER(G) VERSION.R
+#define VER(G) VERSION.K
 #else //github runner build
 #define VER(G) VERSION.##G.B
 #endif
